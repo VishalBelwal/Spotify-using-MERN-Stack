@@ -20,6 +20,8 @@ const SinglePlaylistView = () => {
     };
     getData();
   }, []);
+
+  //song rendring in playlist section
   
   return (
     <LoggedInContainer currentActivescreen={"library"}>
