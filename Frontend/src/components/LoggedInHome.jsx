@@ -37,22 +37,22 @@ const focusCardData = [
 
 const spotifyPlaylistCardData = [
   {
-    title: "Focus",
-    description: "tbsm",
+    title: "Seedhe Maut",
+    description: "Artist",
     imgUrl:
-      "https://images.pexels.com/photos/22858681/pexels-photo-22858681/free-photo-of-a-street-light-and-a-bird-in-the-sky-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://merchbar.imgix.net/brand/square/seedhe-maut.jpg?q=40&auto=compress",
   },
   {
-    title: "Arijit singh",
-    description: "wef",
+    title: "Connor Price",
+    description: "Artist",
     imgUrl:
-      "https://images.pexels.com/photos/22858681/pexels-photo-22858681/free-photo-of-a-street-light-and-a-bird-in-the-sky-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://th.bing.com/th/id/OIP.PZIec9PDkk_Hxt8IVQpRoQHaHa?rs=1&pid=ImgDetMain",
   },
   {
-    title: "3",
-    description: "fei",
+    title: "Weekend",
+    description: "Artist",
     imgUrl:
-      "https://images.pexels.com/photos/22858681/pexels-photo-22858681/free-photo-of-a-street-light-and-a-bird-in-the-sky-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://i.pinimg.com/736x/35/bd/ab/35bdab9b4e59d491484ec5cc88080094.jpg",
   },
   {
     title: "4",
@@ -73,7 +73,7 @@ const LoggedInHome = () => {
     <LoggedInContainer currentActivescreen="homepage">
       <Playlist titleText={"Popular Artists"} cardsData={focusCardData} />
       <Playlist
-        titleText={"Sound of India"}
+        titleText={"Varities"}
         cardsData={spotifyPlaylistCardData}
       />
       {/* <Playlist titleText={"Spotify Playlist"} cardsData={focusCardData} /> */}

@@ -9,6 +9,7 @@ import songContext from "../../context/songcontext";
 import CreatePlaylistModal from "../../modals/CreatePlaylistModal";
 import AddToPlaylistModal from "../../modals/AddToPlaylistModal";
 import { makeAuthenticatedPOSTRequest } from "../../utils/ServerHelper";
+const liked_song_playlist_id="6658a569f83c0086e6f2c930";
 import { useNavigate } from "react-router-dom";
 
 function LoggedInContainer({ children, currentActivescreen }) {
@@ -102,7 +103,17 @@ function LoggedInContainer({ children, currentActivescreen }) {
       setIsPaused(true);
     }
   };
-
+  const addSongToLikedSongs = async (playlistId) => {
+    console.log("heart button clicked")
+    const songId = currentSong._id;
+  
+    const payload = { playlistId, songId };
+    const response = await makeAuthenticatedPOSTRequest(
+      "/playlist/add/song",
+      payload
+    );
+    
+  };
   return (
     <div className="h-full w-full bg-app-black">
       {/*opening and closing modal*/}
@@ -281,12 +292,11 @@ function LoggedInContainer({ children, currentActivescreen }) {
             <Icon
               icon="ph:heart-bold"
               fontSize={25}
-              onClickCapture={() => {
-                navigate("/likedsongs")
-              }}
               className="cursor-pointer text-gray-500 hover:text-white"
-              onClick={handleHeartClick}
-            />
+              onClick={() => {
+                addSongToLikedSongs(liked_song_playlist_id);
+              }}
+              />
           </div>
         </div>
       )}
