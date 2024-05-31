@@ -4,11 +4,10 @@ import LoggedInContainer from "./Container/Loggedincontainer";
 import { makeAuthenticatedGETRequest } from "../utils/ServerHelper";
 import SingleSongCard from "./Shared/SingleSongCard";
 const liked_song_playlist_id="6658a569f83c0086e6f2c930";
-const likedSongView = () => {
+const LikedSongView = () => {
 
   const [songinpPlaylist, setsongsinplaylist] = useState({});
-
-  const { liked_song_playlist_id } = useParams();
+  // const { liked_song_playlist_id } = useParams();
   
   useEffect(() => {
     const getData = async () => {
@@ -60,4 +59,4 @@ const likedSongView = () => {
   );
 }
 
-export default likedSongView;
+export default LikedSongView;
