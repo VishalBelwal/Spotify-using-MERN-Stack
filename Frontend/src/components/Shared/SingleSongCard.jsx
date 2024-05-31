@@ -1,10 +1,10 @@
 import React, { useContext } from "react"
 import songContext from "../../context/songcontext";
-
+const songDuration=130;
 function SingleSongCard({info, playsound, song}) {
 
   const {currentSong, setcurrentSong} = useContext(songContext)
-
+  console.log(info);
   return (
     <div className="text-white flex hover:bg-gray-400 hover:bg-opacity-20 p-2 rounded-md " 
       onClick={() => {
@@ -28,7 +28,7 @@ function SingleSongCard({info, playsound, song}) {
           <div className="text-xs text-gray-400 cursor-pointer hover:underline">{`${info.artist.firstName} ${info.artist.lastName}`}</div>
 
         </div>
-          <div className="w-1/6 flex items-center justify-center text-gray-400">{formatDuration(info.formatDuration)}</div>
+          <div className="w-1/6 flex items-center justify-center text-gray-400">{formatDuration(songDuration)}</div>
       </div>
     </div>
   );

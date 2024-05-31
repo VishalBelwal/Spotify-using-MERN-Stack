@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { makeAuthenticatedGETRequest } from "../utils/ServerHelper";
 import { makeAuthenticatedPOSTRequest } from "../utils/ServerHelper";
 const liked_song_playlist_id="6658a569f83c0086e6f2c930";
+console.log("heart song icon has been clicked")
 const addSongToPlaylist = async (playlistId) => {
   const songId = currentSong._id;
 
