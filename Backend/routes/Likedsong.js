@@ -1,23 +1,4 @@
-// const express = require("express");
-// const router = express.Router()
-// const passport = require("passport");
 
-// const User = require("../models/User");
-
-// router.get(
-//   "/get/liked-songs",
-//   passport.authenticate("jwt", {session: false}),  
-//   async (req, res) => {
-
-//     const userId = req.user.id; // Assuming you have user authentication and can get user ID from the request
-//     const user = await User.findOne({_id: userId}).populate("likedSongs"); // Assuming likedSongs is an array of song IDs
-    
-//     return res.status(200).json({user});
-    
-//   }
-// )
-
-// module.exports = router;
 
 const express = require("express");
 const router = express.Router()
@@ -52,7 +33,7 @@ router.post(
 
 //get a playlist by id route and we will return the playlist having that id
 router.get(
-  "/get/playlist/:playlistId",                 /*colon laga kar ham value ko kaise bhi access kar sakte hai wo kehta hai ki ye var. hai aur ab ham ise koi bhi value assign kar sakte hai i.e. playlist ki jagah kuch bhi aa sakta hai matlab ham kisi bhi naam se playlist ko bula sakte hai */
+  "/get/playlist/:playlistId",                 
   passport.authenticate("jwt", {session: false}),
   async (req, res) => {
     const playlistId = req.params.playlistId;

@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router()
 const passport = require("passport");
 const Song = require("../models/Song")
-const User = require("../models/User")
+const User = require("../models/User");
 
 //passport.authenticate() user ko check karega aur token -pass karega
 
@@ -66,5 +66,6 @@ router.get(
     return res.status(200).json({data: songs})
   }
 )
+
 
 module.exports = router;

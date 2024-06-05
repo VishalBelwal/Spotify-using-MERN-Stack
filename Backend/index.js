@@ -1,7 +1,4 @@
-//npm init --> package.json form hui matlab ye ek node project hai
-//npm i express ----> express.js package install ho gaya aur use pata chala ki ham use kar rahe hai
-
-const express = require("express")         //ye express ke sare packages ko is variable me import kar raha hai
+const express = require("express")         
 const mongoose = require("mongoose")
 
 
@@ -18,6 +15,7 @@ require("dotenv").config();
 const cors = require("cors");
 const app = express();
 const port = 8000;
+const artist = require('./routes/ArtistRoute')
 
 app.use(cors());
 app.use(express.json());          //agar req.body me kuch bhi aa raha hai to use json me convert kar dena hai
@@ -74,6 +72,7 @@ app.use("/auth", authRoutes)
 app.use("/song", songRoutes)
 app.use("/playlist", playlistRoutes)
 app.use("/likedsong", likedsongsRoutes)
+app.use("/artist", artist)
 
 app.listen(port, () => {
   console.log("App is running on Port "+ port);

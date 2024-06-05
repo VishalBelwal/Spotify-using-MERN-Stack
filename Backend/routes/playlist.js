@@ -29,7 +29,7 @@ router.post(
 
 //get a playlist by id route and we will return the playlist having that id
 router.get(
-  "/get/playlist/:playlistId",                 /*colon laga kar ham value ko kaise bhi access kar sakte hai wo kehta hai ki ye var. hai aur ab ham ise koi bhi value assign kar sakte hai i.e. playlist ki jagah kuch bhi aa sakta hai matlab ham kisi bhi naam se playlist ko bula sakte hai */
+  "/get/playlist/:playlistId",                 
   passport.authenticate("jwt", {session: false}),
   async (req, res) => {
     const playlistId = req.params.playlistId;
