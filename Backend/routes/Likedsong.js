@@ -24,7 +24,8 @@ const router = express.Router()
 const passport = require("passport");
 const User = require("../models/User")
 const Song = require("../models/Song");
-const Like = require("../models/likedSongsModel");
+const Like = require("../models/likedSongs");
+
 
 
 //1. create a playlist
