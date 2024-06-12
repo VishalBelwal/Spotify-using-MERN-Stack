@@ -1,5 +1,4 @@
 import React from "react";
-import "./container.css"
 import { useState,useEffect } from "react";
 import SingleSongCard from "./Shared/SingleSongCard";
 import { makeAuthenticatedGETRequest } from "../utils/ServerHelper";

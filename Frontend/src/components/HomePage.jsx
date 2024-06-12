@@ -2,7 +2,6 @@ import React from "react";
 import spotify_logo from "./assets/logo/spotify_white.svg";
 import IconText from "./Shared/IconText";
 import { Icon } from "@iconify/react";
-import "./container.css"
 import ButtonHover from "./Shared/ButtonHover";
 
 const focusCardData = [{
