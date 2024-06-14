@@ -1,10 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import spotify_logo from "./assets/logo/spotify_white.svg";
-import IconText from "./Shared/IconText";
-import { Icon } from "@iconify/react";
-import "./container.css"
-import ButtonHover from "./Shared/ButtonHover";
+// import "./container.css"
 import Input from "./Shared/Input";
 import CloudinaryUpload from "./Shared/CloudinaryUpload";
 import { makeAuthenticatedPOSTRequest } from "../utils/ServerHelper";
@@ -19,7 +15,7 @@ function UploadSong() {
   const [thumbnail, setThumbnail] = useState("")
   const [playlisturl, setPlaylisturl] = useState("")
   const [uploadsongName, setUploadedSongName] = useState()
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
   const submitSong = async () => {
 

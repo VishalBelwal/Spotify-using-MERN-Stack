@@ -2,8 +2,6 @@ import React, { useContext, useLayoutEffect, useRef, useState } from "react";
 import spotify_logo from "../assets/logo/spotify_white.svg";
 import IconText from "../Shared/IconText";
 import { Icon } from "@iconify/react";
-import "../container.css";
-import ButtonHover from "../Shared/ButtonHover";
 import { Howl, Howler } from "howler";
 import songContext from "../../context/songcontext";
 import CreatePlaylistModal from "../../modals/CreatePlaylistModal";
@@ -208,8 +206,8 @@ function LoggedInContainer({ children, currentActivescreen }) {
                 <div className="h-1/2 border-r border-white"></div>
               </div> */}
 
-              <div className="w-1/3 flex justify-end h-full items-center">
-                <div className="bg-white w-10 h-10 flex items-center justify-center rounded-full font-semibold cursor-pointer">
+              <div className="w-1/3 flex justify-end h-full items-center p-5">
+                <div className="bg-white w-10 h-10 flex items-center justify-center rounded-full font-semibold cursor-pointer ">
                   VB
                 </div>
               </div>

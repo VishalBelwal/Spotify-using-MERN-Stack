@@ -21,8 +21,6 @@ const SinglePlaylistView = () => {
     getData();
   }, []);
 
-  //song rendring in playlist section
-  {console.log("song id",songinpPlaylist.playllis_id)}
   return (
     
     <LoggedInContainer currentActivescreen={"library"}>
