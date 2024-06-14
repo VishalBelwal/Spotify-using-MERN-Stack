@@ -67,7 +67,7 @@ function SearchPage() {
                 />
               );
             })}
-          </div> : <div className="text-gray-500 pt-5">Nothing to show here</div>
+          </div> : <div className="text-gray-500 pt-5">Nothing to show here, search a Song</div>
         }
       </div>
     </LoggedInContainer>
