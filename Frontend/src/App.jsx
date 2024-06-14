@@ -13,6 +13,7 @@ import SearchPage from "./components/SearchPage";
 import Library from "./components/Library";
 import SinglePlaylistView from "./components/SinglePlaylistView";
 import LikedSongView from "./components/LikedSongView";
+import Artists from "./components/Artists";
 
 
 const liked_song_playlist_id="6658a569f83c0086e6f2c930";
@@ -39,6 +40,7 @@ function App() {
               <Route path="/library" element={<Library />} />
               <Route path="/playlist/:playlistId" element={<SinglePlaylistView />} />
               <Route path="/likedsongs" element={<LikedSongView/>} />
+              <Route path="/artists/:artistId" element={<Artists/>} />
               <Route path="*" element={<Navigate to="/homepage"/>} />
            </Routes>
           </songContext.Provider>
