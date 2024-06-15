@@ -9,7 +9,7 @@ function PassInput({label, placeholder, value, setValue}) {
       <input
         type="password"
         placeholder={placeholder}
-        className="p-2 text-base border border-gray-500 border-solid rounded-lg placeholder-gray-500 bg-app-black input w-full"
+        className="p-2 border border-gray-500 border-solid rounded-lg placeholder-gray-500 bg-app-black input w-full"
         id={label}
         value={value}
         onChange={(e) => {
