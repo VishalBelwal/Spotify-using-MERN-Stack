@@ -1,176 +1,123 @@
-import React from "react";
-import spotify_logo from "./assets/logo/spotify_white.svg";
-import IconText from "./Shared/IconText";
-import { Icon } from "@iconify/react";
-import ButtonHover from "./Shared/ButtonHover";
+import { Link } from "react-router-dom";
+// import Button from "../../components/Button";
+import InstagramIcon from '@mui/icons-material/Instagram';
+import XIcon from '@mui/icons-material/X';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import CopyrightIcon from '@mui/icons-material/Copyright';
+import spotify_white from "../components/assets/logo/spotify_white.svg";
+import styles from  './style.module.scss';
 
-const focusCardData = [{
-  title: "Focus",
-  description:"tbsm" ,
-  imgUrl:"https://images.pexels.com/photos/22858681/pexels-photo-22858681/free-photo-of-a-street-light-and-a-bird-in-the-sky-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-},
-{
-  title:"Arijit singh",
-  description:"wef",
-  imgUrl:"https://images.pexels.com/photos/22858681/pexels-photo-22858681/free-photo-of-a-street-light-and-a-bird-in-the-sky-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-},
-{
-  title:"3", 
-  description:"fei",
-  imgUrl:"https://images.pexels.com/photos/22858681/pexels-photo-22858681/free-photo-of-a-street-light-and-a-bird-in-the-sky-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-},
-{
-  title:"4", 
-  description:"efoij",
-  imgUrl:"https://images.pexels.com/photos/22858681/pexels-photo-22858681/free-photo-of-a-street-light-and-a-bird-in-the-sky-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-},
-{
-  title:"5", 
-  description:"feiw",
-  imgUrl:"https://images.pexels.com/photos/22858681/pexels-photo-22858681/free-photo-of-a-street-light-and-a-bird-in-the-sky-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-}
-]
+const navLinks = [
+	{ name: "Premium", link: "#" },
+	{ name: "Support", link: "#" },
+	{ name: "Download", link: "#" },
+	{ name: "Sign up", link: "/signup" },
+	{ name: "Log in", link: "/login" },
+];
 
-const spotifyPlaylistCardData = [{
-  title: "Focus",
-  description:"tbsm" ,
-  imgUrl:"https://images.pexels.com/photos/22858681/pexels-photo-22858681/free-photo-of-a-street-light-and-a-bird-in-the-sky-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-},
-{
-  title:"Arijit singh",
-  description:"wef",
-  imgUrl:"https://images.pexels.com/photos/22858681/pexels-photo-22858681/free-photo-of-a-street-light-and-a-bird-in-the-sky-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-},
-{
-  title:"3", 
-  description:"fei",
-  imgUrl:"https://images.pexels.com/photos/22858681/pexels-photo-22858681/free-photo-of-a-street-light-and-a-bird-in-the-sky-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-},
-{
-  title:"4", 
-  description:"efoij",
-  imgUrl:"https://images.pexels.com/photos/22858681/pexels-photo-22858681/free-photo-of-a-street-light-and-a-bird-in-the-sky-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-},
-{
-  title:"5", 
-  description:"feiw",
-  imgUrl:"https://images.pexels.com/photos/22858681/pexels-photo-22858681/free-photo-of-a-street-light-and-a-bird-in-the-sky-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-}
-]
+const companyLInks = ["About", "Jobs", "For the record"];
 
-function Homepage() {
-  return (
-    <div className="h-full w-full flex">
-      <div className="w-1/5 bg-black h-full flex flex-col justify-between">
-        <div>
-          <div className="logodiv p-5">
-            <img src={spotify_logo} alt="Spotify" width={125} />
+const communitiesLinks = [
+	"For Artists",
+	"Developers",
+	"Advertising",
+	"Investors",
+	"Vendors",
+];
 
-            <div className="logo-and-name py-6">
-              <div>
-                <IconText
-                  logo={"material-symbols:home"}
-                  iconName={"Home"}
-                  active
-                />
-              </div>
+const usefulLInks = ["Support", "Web Player", "Free Mobile App"];
 
-              <div>
-                <IconText
-                  logo={"material-symbols:search"}
-                  iconName={"Search"}
-                />
-              </div>
+const footerLinks = [
+	"legal",
+	"privacy center",
+	"privacy policy",
+	"Cookies",
+	"About ads",
+	"Additional CA Privacy Disclosures",
+];
 
-              <div>
-                <IconText
-                  logo={"fluent:library-16-filled"}
-                  iconName={"Library"}
-                />
-              </div>
-            </div>
+const footerIcons = [<InstagramIcon />, <XIcon />, <FacebookIcon />];
 
-            <div className="pt-5">
-              <IconText logo={"mdi:add-box"} iconName={"Create Playlist"} />
+const Main = () => {
+	return (
+		<div className={styles.container}>
+			<nav className={styles.navbar_container}>
+				<Link to="/" className={styles.nav_logo}>
+					<img src={spotify_white} alt="logo" />
+				</Link>
+				<div className={styles.nav_links}>
+					{navLinks.map((link, index) => (
+						<Link key={index} to={link.link} className={styles.links}>
+							{link.name}
+						</Link>
+					))}
+				</div>
+			</nav>
+			<main className={styles.main_container}>
+				<div className={styles.main}>
+					<h1>Listening is everything</h1>
+					<p>Millions of songs and podcasts. No credit card needed.</p>
+					<Link to="/signup">
+						{/* <Button
+							label="GET SPOTIFY FREE"
+							style={{ color: "#2941ab", width: "18rem", fontSize: "1.4rem" }}
+						/> */}
+					</Link>
+				</div>
+			</main>
+			<footer className={styles.footer_container}>
+				<div className={styles.footer_1}>
+					<Link to="/" className={styles.footer_logo}>
+						<img src={spotify_white} alt="logo" />
+					</Link>
+					<div className={styles.footer_1_links}>
+						<div className={styles.footer_heading}>Company</div>
+						{companyLInks.map((link, index) => (
+							<div className={styles.links} key={index}>
+								{link}
+							</div>
+						))}
+					</div>
+					<div className={styles.footer_1_links}>
+						<div className={styles.footer_heading}>Communities</div>
+						{communitiesLinks.map((link, index) => (
+							<div className={styles.links} key={index}>
+								{link}
+							</div>
+						))}
+					</div>
+					<div className={styles.footer_1_links}>
+						<div className={styles.footer_heading}>Useful links</div>
+						{usefulLInks.map((link, index) => (
+							<div className={styles.links} key={index}>
+								{link}
+							</div>
+						))}
+					</div>
+					<div className={styles.footer_icons}>
+						{footerIcons.map((icon, index) => (
+							<div className={styles.icon} key={index}>
+								{icon}
+							</div>
+						))}
+					</div>
+				</div>
+				<div className={styles.footer_2}>
+					<div className={styles.footer_2_links}>
+						{footerLinks.map((link, index) => (
+							<div className={styles.links} key={index}>
+								{link}
+							</div>
+						))}
+					</div>
+					<div className={styles.copy_right}>
+						<CopyrightIcon />
+						<span>2024 Spotify</span>
+					</div>
+				</div>
+			</footer>
+		</div>
+	);
+};
 
-              <IconText logo={"mdi:heart"} iconName={"Liked Song"} />
-            </div>
-          </div>
-        </div>
-
-        <div className="px-5 pb-10">
-          <div className="border border-gray-300 text-white rounded-full w-1/2 flex px-2 py-1 items-center justify-center hover:border-white cursor-pointer ">
-            <Icon icon="simple-line-icons:globe" />
-            <div className="ml-2 text-sm font-semibold">English</div>
-          </div>
-        </div>
-      </div>
-
-      <div className="h-full w-4/5 bg-app-black overflow-auto">
-        <div className="navbar w-full h-1/10 bg-black bg-opacity-30 flex items-center justify-end">
-          <div className="w-1/2 flex h-full">
-
-            {/* <div className="w-3/5 flex justify-around items-center">
-              <ButtonHover text={"Premium"}/>
-              <ButtonHover text={"Support"}/>
-              <ButtonHover text={"Download"}/>
-              <div className="h-1/2 border-r border-white"></div>
-            </div> */}
-            
-            <div className="w-2/5 flex justify-around h-full items-center">
-              <a href="/signup"><ButtonHover text={"Sign up"}/></a>
-              <div className="bg-white h-2/3 px-6 flex items-center justify-center rounded-full font-semibold cursor-pointer">
-                <a href="/login">LOG IN</a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div className="content p-8 pt-0 overflow-auto">
-          <Playlist titleText={"Focus"} cardsData={focusCardData}/>
-          <Playlist titleText={"Sound of India"} cardsData={spotifyPlaylistCardData}/>
-          <Playlist titleText={"Spotify Playlist"} cardsData={focusCardData}/>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-
-const Playlist = ({titleText, cardsData}) => {
-  return(
-    <div className="text-white mt-8">
-      <div className="text-2xl font-semibold mb-5">{titleText}</div>
-      <div className="w-full flex justify-between space-x-4">
-        {
-          //cards data should be an array
-          cardsData.map(item => {
-            return(
-              <Card 
-                title= {item.title}
-                description={item.description}
-                imgUrl={item.imgUrl}
-              />
-            )
-          })
-
-        }
-      </div>
-    </div>
-  )
-}
-
-const Card = ({title, description, imgUrl}) => {
-  return(
-    <div className="bg-black bg-opacity-30 w-1/5 p-4 rounded-md">
-      <div className="pb-4 ">
-        <img className="w-full rounded-md" src={imgUrl} alt="label image" />
-      </div>
-      <div className="text-white font-semibold py-3">{title}</div>
-      <div className="text-gray-500 text-sm">{description}</div>
-    </div>
-  )
-}
-
-export default Homepage;
+export default Main;

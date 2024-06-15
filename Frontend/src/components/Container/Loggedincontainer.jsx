@@ -208,7 +208,7 @@ function LoggedInContainer({ children, currentActivescreen }) {
 
               <div className="w-1/3 flex justify-end h-full items-center p-5">
                 <div className="bg-white w-10 h-10 flex items-center justify-center rounded-full font-semibold cursor-pointer ">
-                  VB
+                <Icon icon="lucide:user-round" width="2rem" height="2rem" />
                 </div>
               </div>
             </div>
