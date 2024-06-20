@@ -21,7 +21,7 @@ function LoginPage() {
 
   const login = async () => {
     
-    const data = {firstName, lastName, email, password};
+    const data = {email, password};
     
     const response = await makeUnauthenticatedPOSTRequest("/auth/login", data);
     if(response && !response.err){
