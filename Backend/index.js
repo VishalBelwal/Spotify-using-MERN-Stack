@@ -14,7 +14,7 @@ const User = require("./models/User")
 require("dotenv").config();
 const cors = require("cors");
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 const artist = require('./routes/ArtistRoute')
 
 app.use(cors());
