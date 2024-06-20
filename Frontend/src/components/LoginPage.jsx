@@ -56,9 +56,9 @@ function LoginPage() {
   });
 
   return (
-    <div className="bg-app-black text-white flex items-center justify-center">
-      <div className="w-full h-full flex flex-col items-center">
-        <div className="login box_shadow m-8 shadow bg-black rounded-3xl">
+    <div className="bg-app-black text-white w-full h-full overflow-x-hidden ">
+      <div className="w-full h-full flex flex-col items-center justify-center">
+        <div className="login box_shadow m-8 shadow bg-black rounded-3xl ">
           <div className="logo p-3 border-gray-300 w-full flex justify-center">
             <img src={logo} style={{ width: 50 }} />
           </div>
