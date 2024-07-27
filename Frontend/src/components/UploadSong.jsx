@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-// import "./container.css"
 import Input from "./Shared/Input";
 import CloudinaryUpload from "./Shared/CloudinaryUpload";
 import { makeAuthenticatedPOSTRequest } from "../utils/ServerHelper";

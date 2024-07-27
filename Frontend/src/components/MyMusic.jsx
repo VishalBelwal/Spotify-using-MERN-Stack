@@ -29,7 +29,9 @@ const MyMusic = () => {
           </div>
         </div>
       ) : (
-        <div className="text-white text-center">Go to upload songs and Add more Songs</div>
+        <div className="text-white text-center flex justify-center items-center">
+          Go to upload songs and Add more Songs
+        </div>
       )}
     </LoggedInContainer>
   );

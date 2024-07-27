@@ -7,7 +7,7 @@ import songContext from "../../context/songcontext";
 import CreatePlaylistModal from "../../modals/CreatePlaylistModal";
 import AddToPlaylistModal from "../../modals/AddToPlaylistModal";
 import { makeAuthenticatedPOSTRequest } from "../../utils/ServerHelper";
-const liked_song_playlist_id="6658a569f83c0086e6f2c930";
+const liked_song_playlist_id="6677b4da2008dfc21e6e1997";
 import { useNavigate } from "react-router-dom";
 
 function LoggedInContainer({ children, currentActivescreen }) {
@@ -199,16 +199,9 @@ function LoggedInContainer({ children, currentActivescreen }) {
         <div className="h-full w-4/5 bg-app-black overflow-auto">
           <div className="navbar w-full h-1/10 bg-black bg-opacity-30 flex items-center justify-end">
             <div className="w-1/2 flex justify-end h-full">
-              {/* <div className="w-2/3 flex justify-around items-center">
-                <ButtonHover text={"Premium"} />
-                <ButtonHover text={"Support"} />
-                <ButtonHover text={"Download"} />
-                <div className="h-1/2 border-r border-white"></div>
-              </div> */}
-
               <div className="w-1/3 flex justify-end h-full items-center p-5">
                 <div className="bg-white w-10 h-10 flex items-center justify-center rounded-full font-semibold cursor-pointer ">
-                <Icon icon="lucide:user-round" width="2rem" height="2rem" />
+                <Icon icon="lucide:user-round" width="1.8rem" height="1.8rem" />
                 </div>
               </div>
             </div>
@@ -291,6 +284,7 @@ function LoggedInContainer({ children, currentActivescreen }) {
               className="cursor-pointer text-gray-500 hover:text-white"
               onClick={() => {
                 addSongToLikedSongs(liked_song_playlist_id);
+                console.log("Heart buton clicked ") 
               }}
               />
           </div>

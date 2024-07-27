@@ -15,11 +15,8 @@ import SinglePlaylistView from "./components/SinglePlaylistView";
 import LikedSongView from "./components/LikedSongView";
 import Artists from "./components/Artists";
 
-
-// const liked_song_playlist_id="6658a569f83c0086e6f2c930";
-
 function App() {
-  // gaane ko global state me store karna hai
+  // Storing the song in a global state
   const[soundplay, setSoundplay] = useState(null);
   const [isPaused, setIsPaused] = useState(true);
   const [currentSong, setcurrentSong] = useState(null)

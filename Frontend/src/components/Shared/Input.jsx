@@ -16,7 +16,7 @@ const Input = ({
           <input
               type="text"
               placeholder={placeholder}
-              className="p-2 text-base border border-solid rounded-lg border-gray-500 placeholder-gray-500 bg-app-black"
+              className="p-2 text-base border border-solid rounded-lg border-gray-500 placeholder-gray-500 bg-app-black text-white"
               id={label}
               value={value}
               onChange={(e) => {

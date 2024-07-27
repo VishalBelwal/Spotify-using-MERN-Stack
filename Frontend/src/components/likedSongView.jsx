@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import LoggedInContainer from "./Container/Loggedincontainer";
 import { makeAuthenticatedGETRequest } from "../utils/ServerHelper";
 import SingleSongCard from "./Shared/SingleSongCard";
-const liked_song_playlist_id="6658a569f83c0086e6f2c930";
+const liked_song_playlist_id="6677b4da2008dfc21e6e1997";
 const LikedSongView = () => {
 
   const [songinpPlaylist, setsongsinplaylist] = useState({});
@@ -13,7 +13,7 @@ const LikedSongView = () => {
         "/playlist/get/playlist/" + liked_song_playlist_id
       );
       setsongsinplaylist(response.playlist);
-      console.log("hi there is is a response",response);
+      // console.log("hi there is is a response",response);
     };
     getData();
   }, []);
@@ -47,7 +47,7 @@ const LikedSongView = () => {
       </div>
         ) : (
           
-          <div className="text-white flex items-center justify-center">No Songs Avialable Here</div>
+          <div className="text-white flex items-center justify-center">No Songs Avialable Here add songs to liked songs</div>
           
         )
       }
